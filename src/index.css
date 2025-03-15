@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
@@ -5,7 +6,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.3rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
@@ -111,6 +112,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  --font-mono: "JetBrains Mono", sans-serif;
 
   @keyframes accordion-down {
     from {
@@ -134,8 +136,11 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    @apply font-mono;
+    @apply font-bold;
   }
   body {
     @apply bg-background text-foreground;
   }
 }
+
