@@ -9,7 +9,7 @@ type ContainerProps = {
 
 export function Container({ children, full, className }: ContainerProps) {
   const ContainerClass = twMerge(
-    "w-full max-w-6xl mx-auto px-2",
+    "w-full max-w-4xl mx-auto px-2",
     full && "w-full max-w-full mx-auto",
     className
   );
